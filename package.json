@@ -1,0 +1,34 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "Sample App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "build"
+  },
+  "author": "Rachel",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/electron": "^1.4.32",
+    "@types/node": "^7.0.5",
+    "@types/react": "^15.0.9",
+    "@types/react-dom": "^0.14.23",
+    "del": "^2.2.2",
+    "electron": "^1.4.15",
+    "electron-builder": "^13.5.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-install": "^0.6.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-print": "^2.0.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-typescript": "^3.1.4",
+    "typescript": "^2.1.6",
+    "typings-npm-gulp": "github:types/npm-gulp"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
