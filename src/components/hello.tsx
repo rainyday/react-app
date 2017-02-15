@@ -6,8 +6,8 @@ export interface Props {
 
 export interface State {}
 
-export default class Hello extends React.Component<Props, void> {
+export default class Hello extends React.Component<Props, State> {
     render() {
-        return <div>Hello, { this.props.name }</div>
+        return <p>Hello, { this.props.name }</p>;
     }
 }

@@ -6,9 +6,9 @@ app.on('ready', e => {
     win = new BrowserWindow({
         show: false
     });
-    win.loadURL(`file://${__dirname}/resources/index.html`);
+    win.loadURL(`file://${__dirname}/index.html`);
     win.on('ready-to-show', e => {
         win.show();
     });
-    win.on('close', e => { app.quit(); })
+    win.on('close', e => { app.quit(); });
 });

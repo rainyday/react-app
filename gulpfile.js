@@ -6,8 +6,9 @@ const $ = require('gulp-load-plugins')();
 
 const src = {
     modules: 'package.json',
-    resources: 'src/resources/**/*',
-    ts: 'src/**/*.{ts,tsx}'
+    resources: ['src/resources/**/*', 'src/**/*.html'],
+    ts: 'src/**/*.{ts,tsx}',
+    html: 'src/**/*.html'
 }
 
 function modules(){
@@ -18,24 +19,25 @@ function modules(){
 gulp.task(modules);
 
 function resources() {
-    return gulp.src(src.resources, { base: 'src/resources'})
-        .pipe(gulp.dest('app/resources'))
+    return gulp.src(src.resources, { base: 'src'})
+        .pipe(gulp.dest('app'))
 }
 gulp.task(resources)
 
 function ts() {
     const project = $.typescript.createProject('tsconfig.json');
     
-    return gulp.src(src.ts)
+    return gulp.src(src.ts, {base: './src'})
         .pipe($.print())
         .pipe($.sourcemaps.init())
         .pipe(project()).js
-        .pipe($.sourcemaps.write('.'))
+        .pipe($.sourcemaps.write())
         .pipe(gulp.dest('app'))
 }
 gulp.task(ts);
 
 gulp.task('clean', () => del('app'));
+gulp.task('clean:maps', () => del('app/**/*.map'));
 
 gulp.task('compile', gulp.parallel(modules, ts, resources));
 

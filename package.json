@@ -23,12 +23,14 @@
     "gulp-print": "^2.0.1",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-typescript": "^3.1.4",
+    "tslint": "^4.4.2",
     "typescript": "^2.1.6",
     "typings-npm-gulp": "github:types/npm-gulp"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "reactive-elements": "^0.6.7"
   }
 }
